@@ -1,0 +1,65 @@
+  { "type": "GeometryCollection",
+
+    "geometries": [
+
+      { "type": "Point",
+
+        "coordinates": [135,-25]
+
+     },
+  { "type": "Point",
+
+        "coordinates": [-122.270833,37.804444]
+
+     },
+  { "type": "Point",
+
+        "coordinates": [30,-25]
+
+     },
+  { "type": "Point",
+
+        "coordinates":[25,-25]
+
+     },
+
+ { "type": "Point",
+
+        "coordinates": [17.15,-22.566667]
+
+     },
+ { "type": "Point",
+
+        "coordinates":[-40,40]
+
+     },
+
+{"type": "Polygon",
+
+"coordinates": [[[-104.05, 48.99], [-37.22,  48.98], [-36.58,  15.94], [-104.05, 48.99]  ]]
+
+},
+
+{"type": "Polygon",
+
+"coordinates": [[
+
+       [-50,-50], [-50,100], [100,-50],[-50,-50]
+
+        ]]
+
+},
+
+
+{ "type": "LineString", "coordinates": [[-85, 40],  [-70,40]]},
+
+{ "type": "LineString", "coordinates": [[-80, 40],  [-70,40]]},
+
+
+{ "type": "LineString", "coordinates": [[-122.270833,37.804444],  [135, -25]]
+
+        }
+
+    ]
+
+  }

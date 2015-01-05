@@ -1,0 +1,66 @@
+
+PIERWSZE
+
+db.places.find({loc: {$nearSphere: {$geometry: {type : "Point",coordinates: [ 25, -25 ]}, $maxDistance: 9000000}}})
+{ "_id" : "nigg", "loc" : { "type" : "Point", "coordinates" : [ 25, -25 ] } }
+{ "_id" : "africa", "loc" : { "type" : "Point", "coordinates" : [ 30, -25 ] } }
+{ "_id" : "namibia", "loc" : { "type" : "Point", "coordinates" : [ 17.15, -22.566667 ] } }
+{ "_id" : ObjectId("54aa6d3fdd6e583659d1e16a"), "loc" : { "type" : "Polygon", "coordinates" : [ [ [ -104.05, 48.99 ], [ -37.22, 48.98 ], [ -36.58, 15.94 ], [ -104.05, 48.99 ] ] ] } }
+
+
+
+DRUGIE
+
+db.places.find({ loc: { $geoWithin: { $center: [ [-35,20], 10000 ] } }})
+{ "_id" : "australia", "loc" : { "type" : "Point", "coordinates" : [ 135, -25 ] } }
+{ "_id" : ObjectId("54aa6d3fdd6e583659d1e16d"), "loc" : { "type" : "Point", "coordinates" : [ -122.270833, 37.804444 ] } }
+{ "_id" : "africa", "loc" : { "type" : "Point", "coordinates" : [ 30, -25 ] } }
+{ "_id" : "nigg", "loc" : { "type" : "Point", "coordinates" : [ 25, -25 ] } }
+{ "_id" : "namibia", "loc" : { "type" : "Point", "coordinates" : [ 17.15, -22.566667 ] } }
+{ "_id" : "check", "loc" : { "type" : "Point", "coordinates" : [ -40, 40 ] } }
+
+
+
+TRZECIE
+
+db.places.find({loc: {$geoIntersects: {$geometry: {type: "Polygon" ,coordinates: [[ [-104.05, 48.99], [-37.22,  48.98], [-36.58,  15.94], [-104.05, 48.99] ] ]}}}}) 
+{ "_id" : ObjectId("54aa6d3fdd6e583659d1e16a"), "loc" : { "type" : "Polygon", "coordinates" : [ [ [ -104.05, 48.99 ], [ -37.22, 48.98 ], [ -36.58, 15.94 ], [ -104.05, 48.99 ] ] ] } }
+{ "_id" : "check", "loc" : { "type" : "Point", "coordinates" : [ -40, 40 ] } }
+
+
+CZWARTE
+
+var ch = {type: "Point", coordinates: [20,20]}
+> db.places.find({ loc: {$near: {$geometry: ch}} }) 
+{ "_id" : "namibia", "loc" : { "type" : "Point", "coordinates" : [ 17.15, -22.566667 ] } }
+{ "_id" : "nigg", "loc" : { "type" : "Point", "coordinates" : [ 25, -25 ] } }
+{ "_id" : "africa", "loc" : { "type" : "Point", "coordinates" : [ 30, -25 ] } }
+{ "_id" : ObjectId("54aa6d3fdd6e583659d1e16a"), "loc" : { "type" : "Polygon", "coordinates" : [ [ [ -104.05, 48.99 ], [ -37.22, 48.98 ], [ -36.58, 15.94 ], [ -104.05, 48.99 ] ] ] } }
+{ "_id" : "check", "loc" : { "type" : "Point", "coordinates" : [ -40, 40 ] } }
+{ "_id" : ObjectId("54aa6ee1dd6e583659d1e16e"), "loc" : { "type" : "LineString", "coordinates" : [ [ -85, 40 ], [ -70, 40 ] ] } }
+{ "_id" : ObjectId("54aa6d3fdd6e583659d1e16b"), "loc" : { "type" : "LineString", "coordinates" : [ [ -100, 40 ], [ -101, 45 ], [ -110, 55 ] ] } }
+{ "_id" : ObjectId("54aa6d3fdd6e583659d1e169"), "loc" : { "type" : "LineString", "coordinates" : [ [ -100, 40 ], [ -105, 45 ], [ -110, 55 ] ] } }
+{ "_id" : ObjectId("54aa6d3fdd6e583659d1e16c"), "loc" : { "type" : "LineString", "coordinates" : [ [ -122.270833, 37.804444 ], [ 135, -25 ] ] } }
+{ "_id" : ObjectId("54aa6d3fdd6e583659d1e16d"), "loc" : { "type" : "Point", "coordinates" : [ -122.270833, 37.804444 ] } }
+{ "_id" : "australia", "loc" : { "type" : "Point", "coordinates" : [ 135, -25 ]
+
+//PIATE
+db.places.find({loc: {$geoWithin: {$geometry: {type : "Polygon" ,coordinates: [ [  [-104.05, 48.99], [-37.22,  48.98], [-36.58,  15.94], [-104.05, 48.99] ] ] }}}}) 
+{ "_id" : ObjectId("54aa6d3fdd6e583659d1e16a"), "loc" : { "type" : "Polygon", "coordinates" : [ [ [ -104.05, 48.99 ], [ -37.22, 48.98 ], [ -36.58, 15.94 ], [ -104.05, 48.99 ] ] ] } }
+{ "_id" : "check", "loc" : { "type" : "Point", "coordinates" : [ -40, 40 ] } }
+
+
+SZOSTE
+
+ db.places.find({loc: {$geoIntersects: {$geometry: {type: "LineString" ,coordinates: [[-80, 40],  [-70,40]] }}}})
+{ "_id" : ObjectId("54aa6ee1dd6e583659d1e16e"), "loc" : { "type" : "LineString", "coordinates" : [ [ -85, 40 ], [ -70, 40 ] ] } }
+
+
+SIODME
+ db.places.find( {loc: { $geoWithin: { $box:  [ [ -50,-50 ], [ 100, 100 ]] }}})
+
+{ "_id" : "africa", "loc" : { "type" : "Point", "coordinates" : [ 30, -25 ] } }
+{ "_id" : "nigg", "loc" : { "type" : "Point", "coordinates" : [ 25, -25 ] } }
+{ "_id" : "namibia", "loc" : { "type" : "Point", "coordinates" : [ 17.15, -22.566667 ] } }
+{ "_id" : "check", "loc" : { "type" : "Point", "coordinates" : [ -40, 40 ] } }
+

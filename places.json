@@ -1,0 +1,18 @@
+
+{"_id":"australia", loc:{"type": "Point", "coordinates": [135,-25]}}
+{ loc:{"type": "LineString","coordinates": [[-100, 40], [-105, 45], [-110, 55]]}}
+{loc:{"type": "Polygon","coordinates": [[[-104.05, 48.99], [-37.22,  48.98], [-36.58,  15.94], [-104.05, 48.99]  ]]}}
+{loc:{ "type": "LineString", "coordinates": [[-100, 40], [-101, 45], [-110, 55]]}}
+{loc:{ "type": "LineString", "coordinates": [[-122.270833,37.804444],  [135, -25]] }}
+{loc:{ "type": "Point", "coordinates": [-122.270833,37.804444]}}
+{"_id":"africa", loc:{"type": "Point", "coordinates": [30,-25]}}
+{"_id":"nigg", loc:{"type": "Point", "coordinates": [25,-25]}}
+{"_id":"namibia",  loc:{"type":"Point","coordinates":[17.15,-22.566667]}}
+{"_id":"check",  loc:{"type":"Point","coordinates":[-40,40]}}
+{loc:{ "type": "LineString", "coordinates": [[-85, 40],  [-70,40]] }}
+{loc:{ "type": "LineString", "coordinates": [[-80, 40],  [-70,40]] }}
+
+
+
+
+
