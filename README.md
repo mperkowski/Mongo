@@ -20,8 +20,8 @@ Zliczanie rekordów:
 Importowanie trwało 1:18:06
 
 <h3>Zadanie 1d</h3?<br />
-<h3>Geojson</h3><br />
-![Mapa](https://github.com/mperkowski/Mongo/blob/master/places.geojson)
+Geojson<br />
+![Mapa](https://github.com/mperkowski/Mongo/blob/master/places.geojson)<br />
 
 Zapytania wraz z wynikami śą dostępne tutaj:<br />
 [Geospatial queries](https://github.com/mperkowski/Mongo/blob/master/queries)
