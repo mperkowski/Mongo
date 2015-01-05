@@ -20,9 +20,55 @@ Zliczanie rekordów:
 Importowanie trwało 1:18:06
 
 Zadanie 1d<br />
-Geojson - mapa<br />
+Geojson<br />
 ![Mapa](https://github.com/mperkowski/Mongo/blob/master/places.geojson)
 
-Geospatial queries wraz z wynikami śą dostępne tutaj:
+Zapytania wraz z wynikami śą dostępne tutaj:
+[Geospatial queries](https://github.com/mperkowski/Mongo/blob/master/queries)
 
-[Zapytania](https://github.com/mperkowski/Mongo/blob/master/queries)
+
+Dane na temat kolekcji przed i po dodaniu indexów:
+```
+db.places.stats()
+{
+	"ns" : "test.spr",
+	"count" : 12,
+	"size" : 2112,
+	"avgObjSize" : 176,
+	"storageSize" : 8192,
+	"numExtents" : 1,
+	"nindexes" : 1,
+	"lastExtentSize" : 8192,
+	"paddingFactor" : 1,
+	"systemFlags" : 1,
+	"userFlags" : 1,
+	"totalIndexSize" : 8176,
+	"indexSizes" : {
+		"_id_" : 8176
+	},
+	"ok" : 1
+}
+```
+```
+db.places.stats()
+{
+	"ns" : "test.spr",
+	"count" : 12,
+	"size" : 2112,
+	"avgObjSize" : 176,
+	"storageSize" : 8192,
+	"numExtents" : 1,
+	"nindexes" : 2,
+	"lastExtentSize" : 8192,
+	"paddingFactor" : 1,
+	"systemFlags" : 1,
+	"userFlags" : 1,
+	"totalIndexSize" : 89936,
+	"indexSizes" : {
+		"_id_" : 8176,
+		"loc_2dsphere" : 81760
+	},
+	"ok" : 1
+}
+```
+
