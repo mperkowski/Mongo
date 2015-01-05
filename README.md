@@ -21,4 +21,8 @@ Importowanie trwało 1:18:06
 
 Zadanie 1d<br />
 Geojson - mapa<br />
-![places](https://github.com/mperkowski/Mongo/blob/master/places.geojson)
+![Mapa](https://github.com/mperkowski/Mongo/blob/master/places.geojson)
+
+Geospatial queries wraz z wynikami śą dostępne tutaj:
+
+[Zapytania](https://github.com/mperkowski/Mongo/blob/master/queries)
